@@ -157,7 +157,13 @@ unknown key sequence was entered).")
         (insert (key-description (car entry)))
         (insert " ")
         (princ (cdr entry) (current-buffer))
-        (insert "\n")))))
+        (insert "\n"))
+      ;; This would be so sweet if it worked.
+      ;; (set-mark (point))
+      ;; (search-backward "\n\nFull command log:\n\n")
+      ;; (goto-char (match-end 0))
+      ;; (align-regexp (region-beginning) (region-end) " [-a-z]+")
+      )))
 
 (defun vimgolf-enable-capture (enable)
   "Enable keystroke logging if `ENABLE' is non-nil otherwise disable it."
