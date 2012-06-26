@@ -1,4 +1,4 @@
-# VimGolf Minor Mode Roadmap
+# VimGolf in Emacs Roadmap
 
 ## Features
 
