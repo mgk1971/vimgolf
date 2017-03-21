@@ -262,7 +262,7 @@ unknown key sequence was entered).")
   (set-window-configuration vimgolf-prior-window-configuration)
   (message "I declare you, n00b!"))
 
-(defvar vimgolf-host "http://vimgolf.com/")
+(defvar vimgolf-host "http://www.vimgolf.com/")
 
 ;; (setq vimgolf-host "http://vimgolf.local:8888/")
 ;; (setq vimgolf-host "http://vimgolf.com/")
@@ -352,7 +352,8 @@ unknown key sequence was entered).")
   (vimgolf-browse t))
 
 (defun vimgolf-replace-control-m (string &optional replace)
-  (replace-regexp-in-string "" (or replace " ") string))
+  (replace-regexp-in-string "
+" (or replace " ") string))
 
 (defun vimgolf-parse-html-entites (string)
   (replace-regexp-in-string
